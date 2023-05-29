@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .error-message {
+        color: red;
+        font-size: 12px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        text-align: start;
+      }
+      /* .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      } */
+      .container > form > div > label {
+        margin-right: 0.5rem;
+      }
+      .container > form > div > input,
+      textarea {
+        width: 200px;
+      }
+      label,
+      input, textarea {
+        margin: 1rem 1rem;
+      }
+      button {
+        margin: 0.5rem 0.5rem;
+        padding: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        <table>
+          <tr>
+            <td>
+              <label for="nameInput">Name:</label>
+            </td>
+            <td>
+              <input type="text" id="nameInput" name="nameInput" />
+            </td>
+            <td>
+              <span id="nameError" class="error-message"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="emailInput">Email:</label>
+            </td>
+            <td>
+              <input type="email" id="emailInput" name="emailInput" />
+            </td>
+            <td>
+              <span id="emailError" class="error-message"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="websiteInput">Website:</label>
+            </td>
+            <td>
+              <input type="text" id="nameInput" name="nameInput" />
+            </td>
+            <td>
+              <span id="nameError" class="error-message"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="nameInput">Name:</label>
+            </td>
+            <td>
+              <input type="url" id="websiteInput" name="websiteInput" />
+            </td>
+            <td>
+              <span id="websiteError" class="error-message"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="messageInput">Message:</label>
+            </td>
+            <td>
+              <textarea
+                id="messageInput"
+                name="messageInput"
+                placeholder="Enter your message"
+              ></textarea>
+            </td>
+            <td>
+              <span id="messageError" class="error-message"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="submit" value="Submit" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var nameInput = document.forms["myForm"]["nameInput"].value;
+        var emailInput = document.forms["myForm"]["emailInput"].value;
+        var websiteInput = document.forms["myForm"]["websiteInput"].value;
+        var messageInput = document.forms["myForm"]["messageInput"].value;
+
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var websiteError = document.getElementById("websiteError");
+        var messageError = document.getElementById("messageError");
+
+        if (nameInput === "") {
+          nameError.textContent = "Name is required.";
+          return false;
+        } else {
+          nameError.textContent = "";
+        }
+
+        if (emailInput === "") {
+          emailError.textContent = "Email is required.";
+          return false;
+        } else {
+          emailError.textContent = "";
+        }
+
+        if (websiteInput === "") {
+          websiteError.textContent = "Website is required.";
+          return false;
+        } else {
+          websiteError.textContent = "";
+        }
+
+        if (messageInput === "") {
+          messageError.textContent = "Message is required.";
+          return false;
+        } else {
+          messageError.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>
