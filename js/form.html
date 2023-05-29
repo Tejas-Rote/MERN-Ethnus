@@ -1,0 +1,252 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Form Validation</title>
+    <script>
+    function validateForm() {
+        var nameInput = document.forms["myForm"]["nameInput"].value;
+        var emailInput = document.forms["myForm"]["emailInput"].value;
+        var websiteInput = document.forms["myForm"]["websiteInput"].value;
+        var messageInput = document.forms["myForm"]["messageInput"].value;
+  
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var websiteError = document.getElementById("websiteError");
+        var messageError = document.getElementById("messageError");
+  
+        if (nameInput === "") {
+          nameError.textContent = "Name is required.";
+          return false;
+        } else {
+          nameError.textContent = "";
+        }
+  
+        if (emailInput === "") {
+          emailError.textContent = "Email is required.";
+          return false;
+        } else {
+          emailError.textContent = "";
+        }
+  
+        if (websiteInput === "") {
+          websiteError.textContent = "Website is required.";
+          return false;
+        } else {
+          websiteError.textContent = "";
+        }
+  
+        if (messageInput === "") {
+          messageError.textContent = "Message is required.";
+          return false;
+        } else {
+          messageError.textContent = "";
+        }
+      }
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100vh;
+      }
+      .container > form {
+        display: flex;
+        flex-direction: column;
+        /* width: 300px; */
+      }
+      .container > form > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 1rem;
+      }
+
+      .container > form > div > label {
+        margin-right: 0.5rem;
+      }
+      .container > form > div > input,
+      textarea {
+        /* margin-right: .5rem; */
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="row">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+          <p class="warnName"></p>
+        </div>
+        <div class="row">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+          <p class="warnEmail"></p>
+        </div>
+        <div class="row">
+          <label for="website">Website:</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            placeholder="Enter your website"
+          />
+          <p class="warnWeb"></p>
+        </div>
+        <div class="row">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Enter your message"
+          ></textarea>
+          <p class="warnMsg"></p>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Validation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .error-message {
+        color: red;
+        font-size: 12px;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        text-align: start;
+      }
+      /* .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      } */
+      .container > form > div > label {
+        margin-right: 0.5rem;
+      }
+      .container > form > div > input , textarea {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="myForm" onsubmit="return validateForm()" method="post">
+        <div class="row">
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" name="nameInput" />
+          <span id="nameError" class="error-message"></span>
+        </div>
+        <br /><br />
+        <div class="row">
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" name="emailInput" />
+          <span id="emailError" class="error-message"></span>
+        </div>
+
+        <br /><br />
+        <div class="row">
+          <label for="websiteInput">Website:</label>
+          <input type="url" id="websiteInput" name="websiteInput" />
+          <span id="websiteError" class="error-message"></span>
+        </div>
+        <br /><br />
+        <div class="row">
+          <label for="messageInput">Message:</label>
+          <textarea
+            id="messageInput"
+            name="messageInput"
+            placeholder="Enter your message"
+          ></textarea>
+          <span id="messageError" class="error-message"></span>
+        </div>
+        <br /><br />
+        <div class="row">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm() {
+        var nameInput = document.forms["myForm"]["nameInput"].value;
+        var emailInput = document.forms["myForm"]["emailInput"].value;
+        var websiteInput = document.forms["myForm"]["websiteInput"].value;
+        var messageInput = document.forms["myForm"]["messageInput"].value;
+
+        var nameError = document.getElementById("nameError");
+        var emailError = document.getElementById("emailError");
+        var websiteError = document.getElementById("websiteError");
+        var messageError = document.getElementById("messageError");
+
+        if (nameInput === "") {
+          nameError.textContent = "Name is required.";
+          return false;
+        } else {
+          nameError.textContent = "";
+        }
+
+        if (emailInput === "") {
+          emailError.textContent = "Email is required.";
+          return false;
+        } else {
+          emailError.textContent = "";
+        }
+
+        if (websiteInput === "") {
+          websiteError.textContent = "Website is required.";
+          return false;
+        } else {
+          websiteError.textContent = "";
+        }
+
+        if (messageInput === "") {
+          messageError.textContent = "Message is required.";
+          return false;
+        } else {
+          messageError.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>

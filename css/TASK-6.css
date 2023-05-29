@@ -1,0 +1,36 @@
+  * {
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  padding: 0rem 16rem;
+  margin: 0px;
+  height: 400px;
+  justify-content: center;
+  align-items: flex-start;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: green;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: lightgrey;
+}

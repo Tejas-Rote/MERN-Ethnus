@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Button Redirect</title>
+    <script>
+      function redirectToPage2() {
+        window.location.href = "page2.html";
+      }
+      function redirectToPage3() {
+        window.location.href = "page3.html";
+      }
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+        .container > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container >div> button {
+            padding: 5px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="p1">
+        <h1>Page 1</h1><br/>
+        <a href="#">Page 2 </a><br/><br/>
+        <button type="button" onclick="redirectToPage2()">Next</button>
+      </div>
+      <div class="p2">
+        <h1>Page 2</h1><br/>
+        <a href="#">Page 3 </a><br/><br/>
+        <button type="button" onclick="redirectToPage3()">Next</button>
+      </div>
+      <div class="p3">
+        <h1>Page 3</h1><br/>
+        <a href="#">Page 2 </a><br/><br/>
+        <button type="button" onclick="redirectToPage2()">Previous</button>
+      </div>
+    </div>
+  </body>
+</html>

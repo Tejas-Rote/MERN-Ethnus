@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  background-color: lightgreen;
+  margin: 0px;
+  height: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 800px;
+}
+
+.left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  flex: 3;
+  margin: 0.5rem 0rem;
+}
+
+.right h1 {
+  color: purple;
+}
+
+.right p {
+  color: red;
+}
+
+.vnavbar {
+  list-style-type: none;
+}
+
+.vnavbar ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vnavbar li {
+  margin: 0.2rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: none;
+  background-color: white;
+}
+.black {
+  height: auto;
+  width: 10px;
+  margin-left: 5px;
+  background-color: #333333;
+}
+.vnavbar a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  padding: 5px;
+  color: blue;
+  transition: color 0.3s;
+}
+
+.vnavbar a:hover,
+.vnavbar li:hover {
+  color: white;
+  background-color: orange;
+}

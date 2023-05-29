@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  margin: 0px;
+  height: 400px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.vnavbar {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.vnavbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vnavbar li {
+  margin: none;
+  padding: 4;
+  background-color: aqua;
+}
+.vnavbar a {
+  display: block;
+  text-decoration: none;
+  color: #333333;
+  padding: 5px;
+  color: blue;
+  transition: color 0.3s;
+}
+
+.vnavbar a:hover,
+.vnavbar li:hover {
+  color: white;
+  background-color: orange;
+}

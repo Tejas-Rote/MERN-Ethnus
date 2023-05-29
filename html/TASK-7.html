@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK-7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* margin: 5px; */
+        /* padding: 5px; */
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <br />Tejas Rote - 20BCE2096 <br /><br /> 
+
+    <div class="container">
+      <div>
+        <form>
+          <table>
+            <tr>
+              <td>
+                <label for="fullname">Full Name:</label>
+              </td>
+              <td>
+                <input type="text" id="fullname" name="fullname" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="username" style="margin-right: 0.5rem"
+                  >Username:</label
+                >
+              </td>
+              <td>
+                <input type="text" id="username" name="username" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="password" style="margin-right: 1rem"
+                  >Password:</label
+                >
+              </td>
+              <td>
+                <input type="password" id="password" name="password" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="repassword" style="margin-right: -0.2rem"
+                  >Re Password:</label
+                >
+              </td>
+              <td>
+                <input
+                  type="password"
+                  id="repassword"
+                  name="repassword"
+                  required
+                />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="address" style="margin-right: 1.5rem"
+                  >Address:</label
+                >
+              </td>
+              <td>
+                <input type="text" id="address" name="address" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="age" style="margin-right: 3rem">Age:</label>
+              </td>
+              <td>
+                <input type="number" id="age" name="age" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="gender" style="margin-right: 2rem">Gender:</label>
+              </td>
+              <td>
+                <select id="gender" name="gender" required>
+                  <option value="">Select gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <button type="submit">Save</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

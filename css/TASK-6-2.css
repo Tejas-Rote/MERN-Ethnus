@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+  color: #333333;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+}
+
+.button:hover {
+  width: 150;
+  height: 100px;
+}

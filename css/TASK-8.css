@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.custom-div {
+  border: 1px solid black;
+  max-width: 400px ;
+}
+
+.custom-paragraph {
+  background-color: yellow;
+  margin: 40px;
+}

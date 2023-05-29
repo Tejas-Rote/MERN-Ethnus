@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <script>
+      function multiply() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+
+        var multiplicationResult = num1 * num2;
+
+        document.getElementById("multiplicationResult").textContent =
+          "Multiplication result: " + multiplicationResult;
+      }
+
+      function divide() {
+        var num1 = Number(document.getElementById("num1").value);
+        var num2 = Number(document.getElementById("num2").value);
+
+        var divisionResult = num1 / num2;
+
+        document.getElementById("divisionResult").textContent =
+          "Division result: " + divisionResult;
+      }
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: flex-start;
+        height: 100vh;
+      }
+      .calc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        height: auto;
+      }
+      .row {
+        margin: 1rem 0rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc">
+        <div class="row">
+          <h2>Calculator</h2>
+        </div>
+        <div class="row">
+          <label for="num1">Number 1:</label>
+          <input type="number" id="num1" />
+          <label for="num2">Number 2:</label>
+          <input type="number" id="num2" />
+        </div>
+        <div class="row">
+          <button onclick="multiply()">Multiply</button>
+          <button onclick="divide()">Divide</button>
+        </div>
+        <!-- <div class="row"> -->
+        <!-- </div> -->
+        <p id="multiplicationResult"></p>
+        <p id="divisionResult"></p>
+      </div>
+    </div>
+  </body>
+</html>

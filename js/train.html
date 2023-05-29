@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Animation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script>
+      var animation;
+
+      function startAnimation() {
+        var animatedImage = document.getElementById("animatedImage");
+        animatedImage.style.animationPlayState = "running";
+      }
+
+      function stopAnimation() {
+        var animatedImage = document.getElementById("animatedImage");
+        animatedImage.style.animationPlayState = "paused";
+      }
+    </script>
+    <style>
+      #animatedImage {
+        position: absolute;
+        left: 0;
+        top: 25%;
+        transform: translateY(-50%);
+        animation: moveRight 4s linear infinite;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .row > button {
+        padding: 5px;
+        margin: 0 5px;
+      }
+      @keyframes moveRight {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="animatedImage" src="./images/train.png" alt="Animated Image" />
+      <h1>Image Animation</h1>
+      <br />
+      <div class="row">
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+      </div>
+    </div>
+  </body>
+</html>
