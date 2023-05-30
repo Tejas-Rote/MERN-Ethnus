@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Button Redirect</title>
+    <title>Task-2</title>
     <script>
       function redirectToPage2() {
         window.location.href = "page2.html";
       }
       function redirectToPage3() {
         window.location.href = "page3.html";
+      }
+      function backTopage2() {
+        history.back();
       }
     </script>
     <style>
@@ -48,7 +51,7 @@
       <div class="p3">
         <h1>Page 3</h1><br/>
         <a href="#">Page 2 </a><br/><br/>
-        <button type="button" onclick="redirectToPage2()">Previous</button>
+        <button type="button" onclick="backTopage2()">Previous</button>
       </div>
     </div>
   </body>

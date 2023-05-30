@@ -1,0 +1,193 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK-9</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        /* margin: 5px; */
+        /* padding: 5px; */
+      }
+      .container {
+        background-color: purple;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 1000px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blueviolet;
+      }
+      table {
+        margin: 10px;
+      }
+
+      td {
+        /* border: 1px solid black; */
+        margin: 0;
+        padding: 2px;
+      }
+      /* input {
+        width: 100%;
+      } */
+      label {
+        font-weight: bold;
+      }
+      /* tr{
+        display: flex;
+      } */
+    </style>
+  </head>
+  <body>
+    <br />Tejas Rote - 20BCE2096 <br /><br />
+
+    <div class="container">
+      <div>
+        <!-- <h1 style="color: blue">Registration form</h1>+ -->
+      </div>
+      <div>
+        <form>
+          <table>
+            <tr>
+              <td>
+                <label for="Name"> Name:</label>
+              </td>
+              <td>
+                <input type="text" id="Name" name="Name" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="email">Email:</label>
+              </td>
+              <td>
+                <input type="email" id="email" name="email" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Password:</label>
+              </td>
+              <td>
+                <input type="password" id="password" name="password" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="phone">Phone Number:</label>
+              </td>
+              <td>
+                <input type="tel" id="phone" name="phone" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Gender:</label>
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <label for="male">
+                        <input
+                          type="radio"
+                          id="male"
+                          name="gender"
+                          value="male"
+                          required
+                        />
+                        Male
+                      </label>
+                    </td>
+                    <td>
+                      <label for="female">
+                        <input
+                          type="radio"
+                          id="female"
+                          name="gender"
+                          value="female"
+                          required
+                        />
+                        Female
+                      </label>
+                    </td>
+                    <td>
+                      <label for="other">
+                        <input
+                          type="radio"
+                          id="other"
+                          name="gender"
+                          value="other"
+                          required
+                        />
+                        Female
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+  
+            <tr>
+              <td>
+                <label for="language">Language:</label>
+              </td>
+              <td>
+                <select id="language" name="language" required>
+                  <option value="">Select a language</option>
+                  <option value="usa">USA</option>
+                  <option value="canada">Canada</option>
+                  <option value="uk">UK</option>
+                  <!-- Add more options for other countries -->
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="Zipcode">Zipcode:</label>
+              </td>
+              <td>
+                <input type="text" id="Zipcode" name="Zipcode" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="About">About:</label>
+              </td>
+              <td>
+                <textarea id="About" name="About" placeholder="Write about yourself" required></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="declaration">
+                  <input
+                    type="checkbox"
+                    id="declaration"
+                    name="declaration"
+                    required
+                  />
+                  I hereby declare that all the given details are true and
+                  accurate.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;" colspan="2">
+                <button type="submit" style="width: 100%;" >Register</button>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
