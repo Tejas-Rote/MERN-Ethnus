@@ -11,38 +11,44 @@
         /* padding: 5px; */
       }
       .container {
-        background-color: purple;
+        background-color: aquamarine;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 1000px;
+        width: 00px;
+        padding: 2rem;
       }
       form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: blueviolet;
+        background-color: azure;
       }
       table {
         margin: 10px;
       }
 
       td {
-        /* border: 1px solid black; */
         margin: 0;
         padding: 2px;
       }
-      /* input {
-        width: 100%;
-      } */
+      input {
+        width: 90%;
+      }
+      #male,
+      #female,
+      #other {
+        width: 10px;
+      }
+
       label {
         font-weight: bold;
       }
-      /* tr{
-        display: flex;
-      } */
+      textarea {
+        min-width: 250px;
+      }
     </style>
   </head>
   <body>
@@ -50,7 +56,6 @@
 
     <div class="container">
       <div>
-        <!-- <h1 style="color: blue">Registration form</h1>+ -->
       </div>
       <div>
         <form>
@@ -135,7 +140,7 @@
                 </table>
               </td>
             </tr>
-  
+
             <tr>
               <td>
                 <label for="language">Language:</label>
@@ -163,26 +168,18 @@
                 <label for="About">About:</label>
               </td>
               <td>
-                <textarea id="About" name="About" placeholder="Write about yourself" required></textarea>
+                <textarea
+                  id="About"
+                  name="About"
+                  placeholder="Write about yourself"
+                  required
+                ></textarea>
               </td>
             </tr>
+
             <tr>
-              <td colspan="2">
-                <label for="declaration">
-                  <input
-                    type="checkbox"
-                    id="declaration"
-                    name="declaration"
-                    required
-                  />
-                  I hereby declare that all the given details are true and
-                  accurate.
-                </label>
-              </td>
-            </tr>
-            <tr>
-              <td style="text-align: center;" colspan="2">
-                <button type="submit" style="width: 100%;" >Register</button>
+              <td style="text-align: center" colspan="2">
+                <button type="submit" style="width: 100%">Register</button>
               </td>
             </tr>
           </table>

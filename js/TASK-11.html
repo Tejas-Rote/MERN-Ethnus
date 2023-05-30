@@ -1,0 +1,417 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TASK-11</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .error-message {
+        color: red;
+        font-size: 12px;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 1000px;
+        /* ff 3.6+ */
+        background: -moz-linear-gradient(
+          270deg,
+          rgba(61, 126, 170, 1) 0%,
+          rgba(255, 228, 122, 1) 100%
+        );
+
+        /* safari 5.1+,chrome 10+ */
+        background: -webkit-linear-gradient(
+          270deg,
+          rgba(61, 126, 170, 1) 0%,
+          rgba(255, 228, 122, 1) 100%
+        );
+
+        /* opera 11.10+ */
+        background: -o-linear-gradient(
+          270deg,
+          rgba(61, 126, 170, 1) 0%,
+          rgba(255, 228, 122, 1) 100%
+        );
+
+        /* ie 6-9 */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3D7EAA', endColorstr='#FFE47A', GradientType=0 );
+
+        /* ie 10+ */
+        background: -ms-linear-gradient(
+          270deg,
+          rgba(61, 126, 170, 1) 0%,
+          rgba(255, 228, 122, 1) 100%
+        );
+
+        /* global 94%+ browsers support */
+        background: linear-gradient(
+          270deg,
+          rgba(61, 126, 170, 1) 0%,
+          rgba(255, 228, 122, 1) 100%
+        );
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      input,
+      textarea {
+        width: 100%;
+      }
+      #male,
+      #female,
+      #other,
+      #english,
+      #hindi,
+      #telugu,
+      #kannada,
+      #declaration {
+        width: 10px;
+      }
+      table {
+        margin: 10px;
+      }
+
+      td {
+        margin: 0;
+        padding: 2px;
+      }
+      label {
+        font-weight: bold;
+      }
+      button {
+        border-radius: 15px;
+        width: 100 px;
+        padding: 5px;
+        background-color: red;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <br />Tejas Rote - 20BCE2096 <br /><br />
+
+    <div class="container">
+      <div>
+        <h1 style="color: blue">Registration form</h1>
+      </div>
+      <div>
+        <form name="myForm" onsubmit="return validateForm()" method="post">
+          <table>
+            <tr>
+              <td>
+                <label for="firstName">First Name:</label>
+              </td>
+              <td>
+                <input type="text" id="firstName" name="firstName" />
+              </td>
+              <td>
+                <span id="fnameError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="lastName">Last Name:</label>
+              </td>
+              <td>
+                <input type="text" id="lastName" name="lastName" />
+              </td>
+              <td>
+                <span id="lnameError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="email">Email:</label>
+              </td>
+              <td>
+                <input type="email" id="email" name="email" />
+              </td>
+              <td>
+                <span id="emailError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Password:</label>
+              </td>
+              <td>
+                <input type="password" id="password" name="password" />
+              </td>
+              <td>
+                <span id="passError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="repassword">Re Password </label>
+              </td>
+              <td>
+                <input type="password" id="repassword" name="repassword" />
+              </td>
+              <td>
+                <span id="repassError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Gender:</label>
+              </td>
+              <td>
+                <table>
+                  <tr>
+                    <td>
+                      <label for="male">
+                        <input
+                          type="radio"
+                          id="male"
+                          name="gender"
+                          value="male"
+                        />
+                        Male
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label for="female">
+                        <input
+                          type="radio"
+                          id="female"
+                          name="gender"
+                          value="female"
+                        />
+                        Female
+                      </label>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="age">Age:</label>
+              </td>
+              <td>
+                <input type="number" id="age" name="age" />
+              </td>
+              <td>
+                <span id="ageError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td>
+                <label for="phone">Phone Number:</label>
+              </td>
+              <td>
+                <input type="tel" id="phone" name="phone" />
+              </td>
+              <td>
+                <span id="telError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="address">Address:</label>
+              </td>
+              <td>
+                <textarea id="address" name="address"></textarea>
+              </td>
+            </tr>
+            <td>
+              <span id="addError" class="error-message"></span>
+            </td>
+            <tr>
+              <td>
+                <label for="state">State:</label>
+              </td>
+              <td>
+                <input type="text" id="state" name="state" />
+              </td>
+              <td>
+                <span id="stateError" class="error-message"></span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="country">Country:</label>
+              </td>
+              <td>
+                <select id="country" name="country">
+                  <option value="">Select a country</option>
+                  <option value="usa">USA</option>
+                  <option value="canada">Canada</option>
+                  <option value="uk">UK</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label>Languages Known:</label>
+              </td>
+              <td>
+                <label for="english">
+                  <input
+                    type="checkbox"
+                    id="english"
+                    name="languages"
+                    value="english"
+                  />
+                  English
+                </label>
+
+                <label for="hindi">
+                  <input
+                    type="checkbox"
+                    id="hindi"
+                    name="languages"
+                    value="hindi"
+                  />
+                  Hindi
+                </label>
+                <label for="telugu">
+                  <input
+                    type="checkbox"
+                    id="telugu"
+                    name="languages"
+                    value="telugu"
+                  />
+                  Telugu
+                </label>
+                <label for="kannada">
+                  <input
+                    type="checkbox"
+                    id="kannada"
+                    name="languages"
+                    value="kannada"
+                  />
+                  Kannada
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <label for="declaration">
+                  <input type="checkbox" id="declaration" name="declaration" />
+                  I hereby declare that all the given details are true and
+                  accurate.
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: end" colspan="2">
+                Log in to <a href="https://ethnus.com">Ethnus</a> website
+              </td>
+            </tr>
+          </table>
+          <button type="submit" value="Submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function validateForm() {
+        var fnameInput = document.forms["myForm"]["firstName"].value;
+        var lnameInput = document.forms["myForm"]["lastName"].value;
+        // var emailInput = document.forms["myForm"]["email"].value;
+        var passInput = document.forms["myForm"]["password"].value;
+
+        var repassInput = document.forms["myForm"]["repassword"].value;
+        var ageInput = document.forms["myForm"]["age"].value;
+        var phoneInput = document.forms["myForm"]["phone"].value;
+        var addInput = document.forms["myForm"]["address"].value;
+        var stateInput = document.forms["myForm"]["state"].value;
+        if (
+          fnameInput === "" ||
+          lnameInput === "" ||
+          emailInput === "" ||
+          passInput === "" ||
+          repassInput === "" ||
+          ageInput === "" ||
+          phoneInput === "" ||
+          addInput === "" ||
+          stateInput === ""
+        ) {
+          fnameError.textContent = "Poor";
+          lnameError.textContent = "Poor";
+          emailError.textContent = "Poor";
+          passError.textContent = "Poor";
+          repassError.textContent = "Poor";
+          ageError.textContent = "Poor";
+          phoneError.textContent = "Poor";
+          addError.textContent = "Poor";
+          stateError.textContent = "Poor";
+          return false;
+        }else {
+          return false;
+        }
+        if (fnameInput === "") {
+          fnameError.textContent = "Poor";
+          return false;
+        } else {
+          fnameError.textContent = "";
+        }
+
+        if (lnameInput === "") {
+          lnameError.textContent = "Poor";
+          return false;
+        } else {
+          lnameError.textContent = "";
+        }
+
+        if (emailInput === "") {
+          emailError.textContent = "Poor";
+          return false;
+        } else {
+          emailError.textContent = "";
+        }
+        if (passInput === "") {
+          passError.textContent = "Poor";
+          return false;
+        } else {
+          passError.textContent = "";
+        }
+        if (repassInput === "") {
+          repassError.textContent = "Poor";
+          return false;
+        } else {
+          repassError.textContent = "";
+        }
+        if (ageInput === "") {
+          ageError.textContent = "Poor";
+          return false;
+        } else {
+          ageError.textContent = "";
+        }
+
+        if (phoneInput === "") {
+          phoneError.textContent = "Poor";
+          return false;
+        } else {
+          phoneError.textContent = "";
+        }
+        if (addInput === "") {
+          addError.textContent = "Poor";
+          return false;
+        } else {
+          addError.textContent = "";
+        }
+        if (stateInput === "") {
+          stateError.textContent = "Poor";
+          return false;
+        } else {
+          stateError.textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>
