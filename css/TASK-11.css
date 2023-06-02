@@ -1,76 +1,76 @@
 * {
   box-sizing: border-box;
 }
-.card {
-  max-width: 450px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 40px;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-}
-
-.circular-icon {
-  width: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-}
 
 .container {
-  padding: 16px;
+  display: flex;
+  background-color: lightgreen;
+  margin: 0px;
+  height: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 800px;
 }
 
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+.left {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+.right {
+  flex: 3;
+  margin: 0.5rem 0rem;
 }
 
-button:hover {
-  opacity: 0.8;
+.right h1 {
+  color: purple;
 }
 
-label {
-  float: left;
+.right p {
+  color: red;
 }
 
-input[type="checkbox"] {
-  margin-top: 16px;
+.vnavbar {
+  list-style-type: none;
 }
 
-h1 {
-  font-size: 24px;
+.vnavbar ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
-img {
-  border-radius: 50%;
+.vnavbar li {
+  margin: 0.2rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: none;
+  background-color: white;
 }
-
-.cancel-btn {
-  background-color: #f44336;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
+.black {
+  height: auto;
+  width: 10px;
+  margin-left: 5px;
+  background-color: #333333;
 }
-
-.forgot-password {
-  color: #999;
+.vnavbar a {
+  display: block;
   text-decoration: none;
+  color: #333333;
+  padding: 5px;
+  color: blue;
+  transition: color 0.3s;
+}
+
+.vnavbar a:hover,
+.vnavbar li:hover {
+  color: white;
+  background-color: orange;
 }

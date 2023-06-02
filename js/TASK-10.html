@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task-10</title>
+  </head>
+  <body>
+    <h1>Array Methods </h1>
+    <div id="output"></div>
+
+    <script>
+      var outputDiv = document.getElementById("output");
+
+      var array = [1, 2, 3, 4, 5];
+
+      function printOutput(methodName, result) {
+        var outputString = methodName + "      ===>   [" + result + "]  ";
+
+        console.log(outputString);
+        outputDiv.innerHTML += "<p>" + outputString + "</p>";
+      }
+
+      function printArray() {
+        printOutput("Array", array);
+      }
+
+      function concatExample() {
+        var newArray = array.concat([6, 7, 8]);
+        printOutput("Concat", newArray);
+      }
+
+      function copyWithinExample() {
+        array.copyWithin(0, 2, 4);
+        printOutput("CopyWithin", array);
+      }
+
+      function mapExample() {
+        var mappedArray = array.map(function (item) {
+          return item * 2;
+        });
+        printOutput("Map", mappedArray);
+      }
+
+      function everyExample() {
+        var isEveryEven = array.every(function (item) {
+          return item % 2 === 0;
+        });
+        printOutput("Every", isEveryEven);
+      }
+
+      function someExample() {
+        var hasSomeOdd = array.some(function (item) {
+          return item % 2 !== 0;
+        });
+        printOutput("Some", hasSomeOdd);
+      }
+
+      function filterExample() {
+        var filteredArray = array.filter(function (item) {
+          return item > 2;
+        });
+        printOutput("Filter", filteredArray);
+      }
+
+      function findIndexExample() {
+        var index = array.findIndex(function (item) {
+          return item === 3;
+        });
+        printOutput("FindIndex of 3", index);
+      }
+
+      function indexOfExample() {
+        var index = array.indexOf(3);
+        printOutput("IndexOf 3", index);
+      }
+
+      function lastIndexOfExample() {
+        var index = array.lastIndexOf(3);
+        printOutput("LastIndexOf 3", index);
+      }
+
+      function pushExample() {
+        array.push(6);
+        printOutput("Push", array);
+      }
+
+      function popExample() {
+        var poppedElement = array.pop();
+        printOutput("Pop", poppedElement);
+      }
+
+      function shiftExample() {
+        var shiftedElement = array.shift();
+        printOutput("Shift", shiftedElement);
+      }
+
+      printArray();
+      concatExample();
+      copyWithinExample();
+      mapExample();
+      everyExample();
+      someExample();
+      filterExample();
+      findIndexExample();
+      indexOfExample();
+      lastIndexOfExample();
+      pushExample();
+      popExample();
+      shiftExample();
+    </script>
+  </body>
+</html>

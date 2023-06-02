@@ -66,6 +66,10 @@
       textarea {
         width: 100%;
       }
+
+      /* textarea {
+        margin-right: 0;
+      } */
       #male,
       #female,
       #other,
@@ -216,7 +220,7 @@
                 <input type="tel" id="phone" name="phone" />
               </td>
               <td>
-                <span id="telError" class="error-message"></span>
+                <span id="phoneError" class="error-message"></span>
               </td>
             </tr>
             <tr>
@@ -226,10 +230,10 @@
               <td>
                 <textarea id="address" name="address"></textarea>
               </td>
+              <td>
+                <span id="addError" class="error-message"></span>
+              </td>
             </tr>
-            <td>
-              <span id="addError" class="error-message"></span>
-            </td>
             <tr>
               <td>
                 <label for="state">State:</label>
@@ -330,30 +334,29 @@
         var phoneInput = document.forms["myForm"]["phone"].value;
         var addInput = document.forms["myForm"]["address"].value;
         var stateInput = document.forms["myForm"]["state"].value;
-        if (
-          fnameInput === "" ||
-          lnameInput === "" ||
-          emailInput === "" ||
-          passInput === "" ||
-          repassInput === "" ||
-          ageInput === "" ||
-          phoneInput === "" ||
-          addInput === "" ||
-          stateInput === ""
-        ) {
-          fnameError.textContent = "Poor";
-          lnameError.textContent = "Poor";
-          emailError.textContent = "Poor";
-          passError.textContent = "Poor";
-          repassError.textContent = "Poor";
-          ageError.textContent = "Poor";
-          phoneError.textContent = "Poor";
-          addError.textContent = "Poor";
-          stateError.textContent = "Poor";
-          return false;
-        }else {
-          return false;
-        }
+        // if (
+        //   fnameInput === "" ||
+        //   lnameInput === "" ||
+        //   emailInput === "" ||
+        //   passInput === "" ||
+        //   repassInput === "" ||
+        //   ageInput === "" ||
+        //   phoneInput === "" ||
+        //   addInput === "" ||
+        //   stateInput === ""
+        // ) {
+        //   fnameError.textContent = "Poor";
+        //   lnameError.textContent = "Poor";
+        //   emailError.textContent = "Poor";
+        //   passError.textContent = "Poor";
+        //   repassError.textContent = "Poor";
+        //   ageError.textContent = "Poor";
+        //   phoneError.textContent = "Poor";
+        //   addError.textContent = "Poor";
+        //   stateError.textContent = "Poor";
+        //   return false;
+        // }
+
         if (fnameInput === "") {
           fnameError.textContent = "Poor";
           return false;

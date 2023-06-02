@@ -2,55 +2,28 @@
   box-sizing: border-box;
   margin: 10px;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.circle {
+
+.button {
+  display: block;
   width: 100px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 10px;
+  color: #333333;
+  cursor: pointer;
+  transition: width 0.3s, height 0.3s;
+}
+
+.button:hover {
+  width: 150;
   height: 100px;
-  border-radius: 50%;
-  border: 3px solid greenyellow;
-}
-
-.oval {
-  width: 120px;
-  height: 80px;
-  border-radius: 50%;
-  border: 3px solid greenyellow;
-}
-
-.rounded-rectangle {
-  width: 120px;
-  height: 80px;
-  border-radius: 8px;
-  border: 3px solid greenyellow;
-}
-
-.rounded2-rectangle {
-  width: 120px;
-  height: 80px;
-  border-radius: 50px;
-  border: 3px solid greenyellow;
-}
-
-.rounded3-rectangle {
-  width: 120px;
-  height: 80px;
-
-  border-top-left-radius: 8px;
-
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 8px;
-
-  border: 3px solid greenyellow;
-}
-
-.rectangle {
-  width: 120px;
-  height: 80px;
-  border: 3px solid greenyellow;
 }
